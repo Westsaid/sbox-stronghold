@@ -24,10 +24,10 @@
 
 		Controller = new WalkController
 		{
-			WalkSpeed = 270,
-			SprintSpeed = 100,
-			DefaultSpeed = 270,
-			AirAcceleration = 10,
+			WalkSpeed = 200,
+			SprintSpeed = 300,
+			DefaultSpeed = 200,
+			AirAcceleration = 1.25f,
 
 		};
 
@@ -151,18 +151,6 @@
 			return;
 
 		TickPlayerUse();
-
-		if ( Input.Pressed( InputButton.View ) )
-		{
-			if ( CameraMode is ThirdPersonCamera )
-			{
-				CameraMode = new FirstPersonCamera();
-			}
-			else
-			{
-				CameraMode = new ThirdPersonCamera();
-			}
-		}
 
 		if ( Input.Pressed( InputButton.Drop ) )
 		{
