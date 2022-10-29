@@ -1,0 +1,8 @@
+"patch"
+{
+	"include"		"materials/PLASTER/PLASTERWALL044C.vmt"
+	"replace"
+	{
+		"$envmap"		"maps/sh_lockdown/c1737_141_-1287"
+	}
+}

@@ -1,0 +1,8 @@
+"patch"
+{
+	"include"		"materials/METAL/METALROOF006A.vmt"
+	"replace"
+	{
+		"$envmap"		"maps/sh_lockdown/c-1584_-807_-1295"
+	}
+}

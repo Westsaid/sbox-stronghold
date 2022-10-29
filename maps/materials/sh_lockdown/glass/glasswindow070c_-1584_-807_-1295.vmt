@@ -1,0 +1,8 @@
+"patch"
+{
+	"include"		"materials/GLASS/GLASSWINDOW070C.vmt"
+	"replace"
+	{
+		"$envmap"		"maps/sh_lockdown/c-1584_-807_-1295"
+	}
+}

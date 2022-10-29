@@ -1,0 +1,8 @@
+"patch"
+{
+	"include"		"materials/CONCRETE/CONCRETEFLOOR028C.vmt"
+	"replace"
+	{
+		"$envmap"		"maps/sh_lockdown/c1002_-1692_-1543"
+	}
+}

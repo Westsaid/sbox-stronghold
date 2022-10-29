@@ -1,0 +1,8 @@
+"patch"
+{
+	"include"		"materials/TILE/TILEFLOOR020A.vmt"
+	"replace"
+	{
+		"$envmap"		"maps/sh_lockdown/c-1694_-128_-1472"
+	}
+}

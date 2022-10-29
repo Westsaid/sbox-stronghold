@@ -1,0 +1,36 @@
+{
+  "Title": "Stronghold",
+  "Type": "game",
+  "Org": "facepunch",
+  "Ident": "stronghold",
+  "Tags": "",
+  "Schema": 1,
+  "HasAssets": true,
+  "AssetsPath": "",
+  "ResourcePaths": [
+    "/resource/*",
+    "/ui/*"
+  ],
+  "HasCode": true,
+  "CodePath": "code",
+  "RootNamespace": "Dm98",
+  "Metadata": {
+    "MinPlayers": 1,
+    "MaxPlayers": 32,
+    "GameNetworkType": 0,
+    "MapList": [
+      "facepunch.datacore"
+    ],
+    "MapSelect": 2,
+    "PerMapRanking": false,
+    "LeaderboardType": 0,
+    "RankType": 0,
+    "ParentPackage": "",
+    "GameCategory": "None",
+    "Compiler": {
+      "RootNamespace": "Sandbox",
+      "DefineConstants": "SANDBOX;ADDON;DEBUG",
+      "NoWarn": "1701;1702;1591;"
+    }
+  }
+}
