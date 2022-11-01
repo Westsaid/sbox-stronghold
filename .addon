@@ -1,7 +1,7 @@
 {
   "Title": "Stronghold",
   "Type": "game",
-  "Org": "facepunch",
+  "Org": "local",
   "Ident": "stronghold",
   "Tags": "",
   "Schema": 1,
@@ -9,7 +9,8 @@
   "AssetsPath": "",
   "ResourcePaths": [
     "/resource/*",
-    "/ui/*"
+    "/ui/*",
+    "/maps/*"
   ],
   "HasCode": true,
   "CodePath": "code",
@@ -26,7 +27,7 @@
     "LeaderboardType": 0,
     "RankType": 0,
     "ParentPackage": "",
-    "GameCategory": "None",
+    "GameCategory": "Shooter",
     "Compiler": {
       "RootNamespace": "Sandbox",
       "DefineConstants": "SANDBOX;ADDON;DEBUG",
