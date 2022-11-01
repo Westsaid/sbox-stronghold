@@ -13,6 +13,7 @@ A remake of GMod's  "F2S Stronghold" in s&box.
 - - - Iron sights
 - - - COD Like shooting style (mod "Gunfight" seems nice)
 - - Base Building
+- - - Rust like building system (grid, different materials)
 - - - Building tool
 - - - Doors
 - - Team system
