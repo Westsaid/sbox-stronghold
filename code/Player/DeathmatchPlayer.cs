@@ -7,6 +7,9 @@
 
 	[Net]
 	public float MaxHealth { get; set; } = 100;
+	
+	[Net]
+	public float Cash { get; set; } = 0;
 
 	public bool SupressPickupNotices { get; private set; }
 
@@ -46,14 +49,15 @@
 		SupressPickupNotices = true;
 
 		Inventory.DeleteContents();
-		Inventory.Add( new Crowbar() );
+		Inventory.Add( new Crowbar(), true );
+		Inventory.Add( new PropTool(), true );
 		Inventory.Add( new Pistol(), true );
 
 		GiveAmmo( AmmoType.Pistol, 25 );
 
 		SupressPickupNotices = false;
 		Health = 100;
-		Armour = 0;
+		Armour = 100;
 
 		base.Respawn();
 	}
@@ -154,7 +158,10 @@
 
 		if ( Input.Pressed( InputButton.Drop ) )
 		{
+			if(Inventory.Active is DeathmatchWeapon asdweapon && !asdweapon.IsDropable) return;
+
 			var dropped = Inventory.DropActive();
+
 			if ( dropped != null )
 			{
 				if ( dropped.PhysicsGroup != null )
@@ -313,8 +320,12 @@
 		if ( LifeState == LifeState.Dead && info.Attacker != null )
 		{
 			if ( info.Attacker.Client != null && info.Attacker != this )
-			{
+			{			
 				info.Attacker.Client.AddInt( "kills" );
+				
+				if ( info.Attacker is not DeathmatchPlayer player )
+					return;
+				player.Cash += 100;
 			}
 		}
 	}

@@ -47,3 +47,24 @@ public class ArmourHud : Panel
 		SetClass( "empty", player.Armour <= 0.0f );
 	}
 }
+
+public class CashHud : Panel
+{
+	public IconPanel Icon;
+	public Label Value;
+
+	public CashHud()
+	{
+		Icon = Add.Icon( "money", "icon" );
+		Value = Add.Label( "0", "label" );
+
+	}
+
+	public override void Tick()
+	{
+		var player = Local.Pawn as DeathmatchPlayer;
+		if ( player == null ) return;
+
+		Value.Text = $"{player.Cash.CeilToInt()}";
+	}
+}

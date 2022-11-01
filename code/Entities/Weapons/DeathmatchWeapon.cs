@@ -5,6 +5,7 @@
 	public virtual float ReloadTime => 3.0f;
 	public virtual int Bucket => 1;
 	public virtual int BucketWeight => 100;
+	public virtual bool IsDropable => true;
 
 	public virtual int Order => (Bucket * 10000) + BucketWeight;
 
@@ -241,6 +242,8 @@
 
 	public override void OnCarryDrop( Entity dropper )
 	{
+		if(dropper is DeathmatchWeapon weapon && !weapon.IsDropable) return;
+
 		base.OnCarryDrop( dropper );
 
 		if ( PickupTrigger.IsValid() )
